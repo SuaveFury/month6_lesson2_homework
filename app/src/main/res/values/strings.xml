@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">month6_lesson2_homework</string>
+    <string name="choose_photo">Выбор фотографий</string>
+    <string name="choice">Выбранные фотографии</string>
+    <string name="recycler">Recycler</string>
+    <string name="send">Send</string>
+</resources>

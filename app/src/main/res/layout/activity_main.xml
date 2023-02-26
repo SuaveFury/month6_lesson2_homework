@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_above="@+id/rv"
+        android:layout_marginVertical="10dp"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="190dp"
+            android:layout_height="28dp"
+            android:layout_marginVertical="18dp"
+            android:textColor="@color/light_grey"
+            android:layout_marginStart="108dp"
+            android:text="@string/choose_photo"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="568dp"
+        app:spanCount="3"
+        tools:listitem="@layout/image_item"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:contentDescription="@string/recycler"
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_above="@id/send_btn" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/send_btn"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:text="@string/send"
+        android:backgroundTint="@color/black"
+        android:layout_alignParentBottom="true"
+        android:textSize="24sp"
+        android:textAllCaps="false"/>
+</RelativeLayout>
